@@ -31,11 +31,11 @@ namespace PlazosFijos
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_InversionInicial = new System.Windows.Forms.TextBox();
+            this.textBox_InteresAnual = new System.Windows.Forms.TextBox();
             this.button_ProcesarOperación = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox_IngresosMensuales = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,19 +62,19 @@ namespace PlazosFijos
             this.label2.TabIndex = 1;
             this.label2.Text = "Ingrese interes anual";
             // 
-            // textBox1
+            // textBox_InversionInicial
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 2;
+            this.textBox_InversionInicial.Location = new System.Drawing.Point(45, 50);
+            this.textBox_InversionInicial.Name = "textBox_InversionInicial";
+            this.textBox_InversionInicial.Size = new System.Drawing.Size(100, 23);
+            this.textBox_InversionInicial.TabIndex = 2;
             // 
-            // textBox2
+            // textBox_InteresAnual
             // 
-            this.textBox2.Location = new System.Drawing.Point(223, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(43, 23);
-            this.textBox2.TabIndex = 3;
+            this.textBox_InteresAnual.Location = new System.Drawing.Point(223, 50);
+            this.textBox_InteresAnual.Name = "textBox_InteresAnual";
+            this.textBox_InteresAnual.Size = new System.Drawing.Size(43, 23);
+            this.textBox_InteresAnual.TabIndex = 3;
             // 
             // button_ProcesarOperación
             // 
@@ -84,6 +84,7 @@ namespace PlazosFijos
             this.button_ProcesarOperación.TabIndex = 4;
             this.button_ProcesarOperación.Text = "Procesar Inversión";
             this.button_ProcesarOperación.UseVisualStyleBackColor = true;
+            this.button_ProcesarOperación.Click += new System.EventHandler(this.button_ProcesarOperación_Click);
             // 
             // label3
             // 
@@ -94,14 +95,14 @@ namespace PlazosFijos
             this.label3.TabIndex = 5;
             this.label3.Text = "Total anual con única inversión:";
             // 
-            // listBox1
+            // listBox_IngresosMensuales
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(45, 151);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(191, 244);
-            this.listBox1.TabIndex = 6;
+            this.listBox_IngresosMensuales.FormattingEnabled = true;
+            this.listBox_IngresosMensuales.ItemHeight = 15;
+            this.listBox_IngresosMensuales.Location = new System.Drawing.Point(45, 151);
+            this.listBox_IngresosMensuales.Name = "listBox_IngresosMensuales";
+            this.listBox_IngresosMensuales.Size = new System.Drawing.Size(191, 244);
+            this.listBox_IngresosMensuales.TabIndex = 6;
             // 
             // label4
             // 
@@ -169,11 +170,11 @@ namespace PlazosFijos
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBox_IngresosMensuales);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button_ProcesarOperación);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_InteresAnual);
+            this.Controls.Add(this.textBox_InversionInicial);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -187,11 +188,11 @@ namespace PlazosFijos
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_InversionInicial;
+        private System.Windows.Forms.TextBox textBox_InteresAnual;
         private System.Windows.Forms.Button button_ProcesarOperación;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox_IngresosMensuales;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
