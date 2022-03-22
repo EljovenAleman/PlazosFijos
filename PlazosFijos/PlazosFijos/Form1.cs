@@ -19,26 +19,32 @@ namespace PlazosFijos
 
         private void button_ProcesarOperación_Click(object sender, EventArgs e)
         {
-            float inversionInicial = int.Parse(textBox_InversionInicial.Text);
-            float interesAnual = int.Parse(textBox_InteresAnual.Text);
+            float inversionInicial = float.Parse(textBox_InversionInicial.Text);
+            float interesAnual = float.Parse(textBox_InteresAnual.Text);
 
             float totalAnual = CalcularTotalAnual(inversionInicial, interesAnual);
             label_TotalUnicaInversion.Text = totalAnual.ToString();
 
             List<float> totalesReinversionMensual = CalcularReinversionMensual(inversionInicial, interesAnual);
 
-            int month = 1;
-            foreach(var item in totalesReinversionMensual)
-            {
-                listBox_IngresosMensuales.Items.Add("Mes " + month + ": " + item);
-                month++;
-            }
-            month = 1;
-
+            MostrarTotalesEnListBox(totalesReinversionMensual, totalAnual);
+            
             label_TotalReinversionMensual.Text = totalesReinversionMensual[11].ToString();
 
             label_TotalGananciaReinversion.Text = (totalesReinversionMensual[11] - totalAnual).ToString();
 
+        }
+
+        private void MostrarTotalesEnListBox(List<float> totalesReinversionMensual, float totalAnual)
+        {
+            listBox_IngresosMensuales.Items.Clear();
+
+            int month = 1;
+            foreach (var item in totalesReinversionMensual)
+            {
+                listBox_IngresosMensuales.Items.Add("Mes " + month + ": " + item);
+                month++;
+            }            
         }
 
         private List<float> CalcularReinversionMensual(float inversionInicial, float interesAnual)
@@ -52,7 +58,12 @@ namespace PlazosFijos
             {
                 interesGanado = inversionMensual * interesMensual;
 
-                inversionMensual = inversionMensual + interesGanado;
+                //Importante, interes redondeado a 2 decimales
+                //float interesRedondeado = (float)Math.Round(interesGanado * 100f) / 100f;
+
+                float interesRedondeado = (float)(Math.Truncate((double)interesGanado * 100f) / 100f);
+
+                inversionMensual = inversionMensual + interesRedondeado;
 
                 resultados.Add(inversionMensual);
             }
@@ -63,6 +74,8 @@ namespace PlazosFijos
         private float CalcularTotalAnual(float inversionInicial, float interesAnual)
         {
             float interes = inversionInicial * (interesAnual / 100);
+
+            float interesRedondeado = (float)(Math.Truncate((double)interes * 100f) / 100f);
 
             float total = inversionInicial + interes;
 

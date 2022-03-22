@@ -137,27 +137,24 @@ namespace PlazosFijos
             this.label_TotalUnicaInversion.AutoSize = true;
             this.label_TotalUnicaInversion.Location = new System.Drawing.Point(650, 139);
             this.label_TotalUnicaInversion.Name = "label_TotalUnicaInversion";
-            this.label_TotalUnicaInversion.Size = new System.Drawing.Size(38, 15);
+            this.label_TotalUnicaInversion.Size = new System.Drawing.Size(0, 15);
             this.label_TotalUnicaInversion.TabIndex = 10;
-            this.label_TotalUnicaInversion.Text = "label7";
             // 
             // label_TotalReinversionMensual
             // 
             this.label_TotalReinversionMensual.AutoSize = true;
             this.label_TotalReinversionMensual.Location = new System.Drawing.Point(650, 169);
             this.label_TotalReinversionMensual.Name = "label_TotalReinversionMensual";
-            this.label_TotalReinversionMensual.Size = new System.Drawing.Size(38, 15);
+            this.label_TotalReinversionMensual.Size = new System.Drawing.Size(0, 15);
             this.label_TotalReinversionMensual.TabIndex = 11;
-            this.label_TotalReinversionMensual.Text = "label8";
             // 
             // label_TotalGananciaReinversion
             // 
             this.label_TotalGananciaReinversion.AutoSize = true;
             this.label_TotalGananciaReinversion.Location = new System.Drawing.Point(650, 231);
             this.label_TotalGananciaReinversion.Name = "label_TotalGananciaReinversion";
-            this.label_TotalGananciaReinversion.Size = new System.Drawing.Size(38, 15);
+            this.label_TotalGananciaReinversion.Size = new System.Drawing.Size(0, 15);
             this.label_TotalGananciaReinversion.TabIndex = 12;
-            this.label_TotalGananciaReinversion.Text = "label9";
             // 
             // Form1
             // 
